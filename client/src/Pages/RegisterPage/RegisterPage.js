@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { redirect } from "react-router-dom";
 
 export default class registro extends Component {
 
@@ -38,6 +39,7 @@ export default class registro extends Component {
       .then((data) => {
         console.log(data, "userRegister");
       }).catch(err => console.log(err));
+      redirect("/pagos");
 
   }
 
