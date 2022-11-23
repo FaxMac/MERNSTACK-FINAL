@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+article{
+    width: 600px;
+    float: left;
+
+}
+aside{
+    width: 360px;
+    float: right;
+
+}
+footer{
+    height: 50px;
+
+}
+p{
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    font-size: 1em;
+}
+img{
+    margin-bottom: 1em;
+    height: 230px;
+}
+html,body{
+    background:#304345;
+}
+header{
+    display:block;
+}
+body{
+    margin: 0 auto;
+    width: 960px;
+    background:#ffc;
+
+}
+section{
+    height: 600px;
+    background-color: white;
+}
+header{
+    height: 90px;
+    background-color: grey ;
+}
+
+h1{
+    margin: 5px;
+    text-align: center;
+    color:white;
+}
+h2{
+    text-align: center;
+    color: white;
+
+}
+h3{
+    clear: both;
+    text-align: center;
+    color: black;
+    font-size: 0.8em;
+    padding-top: 1em;
+
+}
+.der{
+    float: right;
+    margin-left: 2em;
+
+}
+.izq{
+    float:left;
+    margin-right: 2em;
+}
