@@ -4,10 +4,8 @@ import ProductsPage from './Pages/ProductsPages/ProductsPages';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import AboutPage from './Pages/AboutPage/AboutPage';
-//import LoginPage from './Pages/LoginPage/LoginPage';
 import AdminProductsView from './Pages/AdminView/AdminProductsView';
 import AdminLandingPage from './Pages/AdminView/AdminLandingPage';
-//import Carrito from './Pages/Carrito/Carrito';
 import { LoginButton } from './Pages/Auth0/login';
 import { LogoutButton } from './Pages/Auth0/logout';
 import {Profile} from './Pages/Auth0/profile';
@@ -17,6 +15,10 @@ import React from 'react';
 import { CartProvider } from './Pages/Carrito/Carrito';
 import Cart from './Pages/Cart';
 import VerCarrito from './Pages/verCarrito/verCarrito';
+import ShopPage from './Pages/Pagos/Pagos';
+import AdminClientsView from './Pages/AdminView/AdminClientsView';
+import ViewPdf from './Pages/Pagos/Pdf';
+import CancelPage from './Pages/Pagos/Cancelar';
 
 function App() {
   const {isAuthenticated} = useAuth0();
@@ -34,20 +36,13 @@ function App() {
               <li className="nav-item">
                 <a className="nav-link" href="/acerca">Sobre Nosotros</a>
               </li>
-              <li className="nav-item">
-                
-              </li>
               { isAuthenticated ? (
                 <>
-                <li className="nav-item">
-                  <Profile></Profile>
-                </li>
-              <li className="nav-item">
+                <Profile></Profile>
                 <LogoutButton></LogoutButton>
-              </li>
-              </>
+                </>
               ) : (
-                    <LoginButton></LoginButton>
+                <LoginButton></LoginButton>
               )}
             </ul>
             <Cart></Cart>
@@ -60,9 +55,13 @@ function App() {
           <Route path="/detalles/:_product_id" element={<ProductDetails/>} />
           <Route path="/acerca" element={<AboutPage/>} />
           <Route path="/admin/productos" element={<AdminProductsView/>} />
+          <Route path="/admin/clientes" element={<AdminClientsView/>} />
           <Route path="/admin" element={<AdminLandingPage/>} />
           <Route path="/registro" element={<RegisterPage/>} />
           <Route path="/verCarrito" element={<VerCarrito/>} />
+          <Route path="/pagos" element={<ShopPage/>} />
+          <Route path="/viewpdf" element={<ViewPdf/>} />
+          <Route path="/cancelar" element={<CancelPage/>} />
         </Routes>
 
       </div>

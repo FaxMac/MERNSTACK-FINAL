@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import { redirect } from "react-router-dom";
-
-
 
 export default class registro extends Component {
 
@@ -42,17 +39,14 @@ export default class registro extends Component {
         console.log(data, "userRegister");
       }).catch(err => console.log(err));
 
-  
   }
-
-
 
   render() {
     return (
       <div>
       <form onSubmit={this.handleSubmit}>
         <hr/>
-        <h3>LLENA TUS DATOS PARA CONTINUAR CON LA COMPRA!</h3>
+        <h3>COMPLETA TUS DATOS PARA CONTINUAR CON LA COMPRA!</h3>
 
         <div className="mb-3">
           <label>Nombre de cliente</label>
@@ -95,9 +89,17 @@ export default class registro extends Component {
         </div>
 
         <div className="d-grid">
-          <input type="submit"></input>
+          
+            <button type="submit" className="btn btn-secondary">ENVIAR DATOS
+            </button>
+
+            
+            
         </div>
       </form>
+      <center>
+      <a type="button" className="btn btn-outline-success" href="/pagos">CONTINUAR</a>
+      </center>
     </div>
     );
   }

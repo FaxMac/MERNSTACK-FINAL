@@ -7,7 +7,7 @@
   
     .buttonCartContainer {
       position: absolute;
-      margin-top: 10px;
+      margin-top: -8px;
       margin-right: 20px;
       cursor: pointer;
       z-index: 2;
@@ -86,6 +86,6 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #797979;
+    background-color: #000000;
     border-radius: 20px;
   }

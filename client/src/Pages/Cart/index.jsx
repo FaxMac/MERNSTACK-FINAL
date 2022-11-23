@@ -90,7 +90,7 @@ const Cart = () => {
 
           <h2 className={styles.total}>Total: ${total}</h2>
           <center>
-          <a className="btn btn-outline-secondary" href="/verCarrito">Ver Carrito</a>
+          <a className="btn btn-outline-secondary" href="/verCarrito" >Ver Carrito</a>
           </center>
         </div>
       )}

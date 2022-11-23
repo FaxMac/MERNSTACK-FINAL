@@ -10,8 +10,7 @@ export const Profile = () => {
     return(
         isAuthenticated && (
                 <li className="nav-item">
-                    
-                    <h5>Usuario: {user.name}</h5>
+                    <a className="nav-link" href="/">Cliente: {user.given_name} {} </a>
                 </li>
         )
     )

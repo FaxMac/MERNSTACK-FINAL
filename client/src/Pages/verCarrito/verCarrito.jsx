@@ -1,10 +1,12 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
 import { useEffect, useContext, useState } from "react";
 import { CartContext } from "../Carrito/Carrito";
 import { ItemCart } from "../ItemCart";
+import { LoginButton } from "../Auth0/login";
 
 const VerCarrito = () => {
-
+  const {isAuthenticated} = useAuth0();
   const [productsLength, setProductsLength] = useState(0);
 
   const { cartItems } = useContext(CartContext);
@@ -45,7 +47,15 @@ const VerCarrito = () => {
         <h4>Total productos: {productsLength}</h4>
           <h2>Total: ${total}</h2>
           <center>
-          <a className="btn btn-success" href="/registro">Pagar</a>
+          { isAuthenticated ? (
+              <>
+                <a className="btn btn-success" href="/registro">Pagar</a>
+              </>
+              ) : (
+                <>
+                <h3>Debes Ingresar para comprar: <LoginButton/></h3>
+                </>
+              )}
           </center>
         </div>
     </div>

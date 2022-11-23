@@ -16,11 +16,11 @@ export const ItemCart = ({ item }) => {
           <div className={styles.left}>
             <p>{item.title}</p>
             <div className={styles.buttons}>
-              <button onClick={() => addItemToCart(item)}>
-                AGREGAR
-              </button>
               <button onClick={() => deleteItemToCart(item)}>
-                SACAR
+                Quitar
+              </button>
+              <button onClick={() => addItemToCart(item)}>
+                Agregar
               </button>
             </div>
           </div>
